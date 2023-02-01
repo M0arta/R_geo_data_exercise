@@ -1,17 +1,3 @@
 # R_geo_data_exercise
 
-install.packages("tidyverse")
-library(tidyverse)
-library(readxl)
 
-#Open the full dataset for upper chamber from https://electiondataarchive.org/data-and-documentation/clea-upper-chamber-elections-archive/ 
-upper_chamber <- read_excel("C:/Users/Bernardi_Marta/Downloads/upper_chamber.xlsx")
-View(upper_chamber)
-
-#Keep only data for Italy 
-italy_uc <-upper_chamber %>%
-  filter(ctr_n == "Italy") 
-View(italy_uc)
-
-# save dataset only for italy 
-write.csv(italy_uc, "italy_uc.csv")
